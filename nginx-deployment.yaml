@@ -1,0 +1,47 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vanilla-nginx-dep
+  labels:
+    app: vanilla-nginx-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vanilla-nginx-dep
+  template:
+    metadata:
+      labels:
+        app: vanilla-nginx-dep
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: annotated-nginx-dep
+  labels:
+    app: annotated-nginx-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: annotated-nginx-dep
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::012345678901:role/nettech-s3-read-write
+      labels:
+        app: annotated-nginx-dep
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+---
