@@ -10,6 +10,7 @@ This is a simple implementation of Kube2IAM in a non-Production environment. It 
 
 All the K8s artefacts deploy into the default namespace for simplicity; except for the RBAC.
 You will need enhanced privileges in AWS to create the roles and to access the command line of the EC2 node.
-You will also need K8s privileges to deploy the manifests and access the command line of the Pods - to install aws-cli.
+K8s privileges are required to deploy the manifests and access the command line of the Pods - to install aws-cli.
+A prerequisite is AWS S3 access to create the read-only nd read+write buckets - edit the resources with suitable bucket names.
 
 Comments/problems/feedback: <a href="https://www.linkedin.com/in/lanreoyewole/">@LinkedIn</a>, <a href="mailto:lanre@net-technologies.com&subject=Kube2IAm%20Article">@Email</a>
