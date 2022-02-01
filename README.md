@@ -12,4 +12,4 @@ All the K8s artefacts deploy into the default namespace for simplicity; except f
 You will need enhanced privileges in AWS to create the roles and to access the command line of the EC2 node.
 You will also need K8s privileges to deploy the manifests and access the command line of the Pods - to install aws-cli.
 
-Comments/problems/feedback to lanre@net-technologies.com
+Comments/problems/feedback: https://www.linkedin.com/in/lanreoyewole/
