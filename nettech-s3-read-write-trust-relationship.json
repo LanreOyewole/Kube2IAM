@@ -2,7 +2,7 @@
     "Sid": "",
     "Effect": "Allow",
     "Principal": {
-        "AWS": "arn:aws:iam::012345678901:role/nettech-ec2-instance-profile"
+        "AWS": "arn:aws:iam::012345678901:role/nettech-s3-read-only"
     },
     "Action": "sts:AssumeRole"
 }
